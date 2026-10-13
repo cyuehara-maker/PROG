@@ -16,7 +16,7 @@ public class Rombo {
 		for (int i = 0; i < maxHeight; i++) {
 			for (int j = 0; j < maxHeight; j++) {
 
-				if (i + j < height -  1 || i - j >= height || i - j < - height + 1 || i + j > Math.floor(5 * height / 2)) {
+				if (i + j < height -  1 || i - j >= height || i - j < - height + 1 || i + j > Math.floor(5 * height / 2)) { // i + j <= 5h/2
 					System.out.print(' ');
 				} else {
 					System.out.print('*');
