@@ -17,8 +17,8 @@ public class Rombo {
 			for (int j = 1; j <= maxHeight; j++) {
 
 				// basura
-				// if (i + j < height - 1 || i - j >= height || i - j < - height + 1 || i + j > height)
-				// Math.floor(5 * height / 2)) { // i + j <= 5h/2
+				// if (i + j < height - 1 || i - j >= height || i - j < - height + 1 ||
+				// i + j > Math.floor(5 * height / 2)) { // i + j <= 5h/2
 				/*
 				 * { x - y > -h = |x - y| < h
 				 * { x - y < h = |x - y| < h
