@@ -20,14 +20,14 @@ public class Rombo {
 				// if (i + j < height - 1 || i - j >= height || i - j < - height + 1 ||
 				// i + j > Math.floor(5 * height / 2)) { // i + j <= 5h/2
 				/*
-				 * { x - y > -h = |x - y| < h
-				 * { x - y < h = |x - y| < h
-				 * { x + y < 3h = |x + y - 2h| < h
-				 * { x + y > h = |x + y - 2h| < h
+				 * { x - y > -h => |x - y| < h
+				 * { x - y < h => |x - y| < h
+				 * { x + y < 3h => |x + y - 2h| < h
+				 * { x + y > h => |x + y - 2h| < h
 				 */
-				Integer differenceDistance = Math.abs(i - j);
-				Integer sumDistance = Math.abs(i + j - 2 * height);
-				if (differenceDistance < height && sumDistance < height) {
+				Integer centerDistance = Math.abs(i - j);
+				Integer antiCenterDistance = Math.abs(i + j - 2 * height);
+				if (centerDistance < height && antiCenterDistance < height) {
 					System.out.print('*');
 				} else {
 					System.out.print(' ');
