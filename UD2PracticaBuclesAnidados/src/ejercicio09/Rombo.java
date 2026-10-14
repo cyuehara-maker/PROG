@@ -17,17 +17,16 @@ public class Rombo {
 			for (int j = 1; j <= maxHeight; j++) {
 
 				// basura
-				// if (i + j < height - 1 || i - j >= height || i - j < - height + 1 ||
-				// i + j > Math.floor(5 * height / 2)) { // i + j <= 5h/2
+				// if (i + j < height - 1 || i - j >= height || i - j < - height + 1 || i + j > Math.floor(5 * height / 2))
 				/*
 				 * { x - y > -h => |x - y| < h
 				 * { x - y < h => |x - y| < h
 				 * { x + y < 3h => |x + y - 2h| < h
 				 * { x + y > h => |x + y - 2h| < h
 				 */
-				Integer centerDistance = Math.abs(i - j);
-				Integer antiCenterDistance = Math.abs(i + j - 2 * height);
-				if (centerDistance < height && antiCenterDistance < height) {
+				Integer xDistance = Math.abs(i - j);
+				Integer yDistance = Math.abs(i + j - 2 * height);
+				if (xDistance < height && yDistance < height) {
 					System.out.print('*');
 				} else {
 					System.out.print(' ');
