@@ -17,8 +17,9 @@ public class RelojArena {
 			for (int j = 1; j <= maxHeight; j++) {
 				
 				/*
-				 * x+y=2h => x+y<2h -> rightArea
-				 * x-y=0  => x-y<0 -> leftArea
+				 * x+y=2h => x+y<2h
+				 * x-y=0  => x-y<0
+				 * top = x+y<2h U x-y>0
 				 */
 				Boolean top= (i + j > 2 * height || i - j > 0);
 				Boolean bottom = (i + j < 2 * height || i - j < 0);
