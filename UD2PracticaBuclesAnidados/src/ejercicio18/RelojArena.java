@@ -17,12 +17,14 @@ public class RelojArena {
 			for (int j = 1; j <= maxHeight; j++) {
 				
 				/*
-				 * x+y=2h => x+y<2h
-				 * x-y=0  => x-y<0
-				 * top = x+y<2h U x-y>0
+				 * x+y=2h
+				 * x=y
+				 * x+y>2h U x>y
+				 * x+y<2h U x<y
+				 * d1 ^ d2
 				 */
-				Boolean top= (i + j > 2 * height || i - j > 0);
-				Boolean bottom = (i + j < 2 * height || i - j < 0);
+				Boolean top = (i + j > 2 * height || i > j);
+				Boolean bottom = (i + j < 2 * height || i < j);
 				if (top && bottom) {
 					System.out.print(' ');
 				} else {
