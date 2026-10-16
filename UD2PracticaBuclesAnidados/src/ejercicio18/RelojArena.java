@@ -13,28 +13,30 @@ public class RelojArena {
 		Integer height = s.nextInt();
 		
 		Integer maxHeight = 2 * height - 1;
-		for (int i = 1; i <= maxHeight; i++) {
-			for (int j = 1; j <= maxHeight; j++) {
-				
-				/*
-				 * x+y=2h
-				 * x=y
-				 * x+y>2h U x>y
-				 * x+y<2h U x<y
-				 * d1 ^ d2
+		for (int i = 0; i < maxHeight; i++) {
+			for (int j = 0; j < maxHeight; j++) {
+				 /*
+				 * x=y -> ///
+				 * (x,y) (0,1) -> x<y
+				 * x-y<0
+				 * 
+				 * x-y=0 -> \\\
+				 * (x,y) (0,1) -> 0-(-1)>0 -> x-y>0
+				 * x-y+2h>0 -2 de for
 				 */
-				Boolean top = (i + j > 2 * height || i > j);
-				Boolean bottom = (i + j < 2 * height || i < j);
-				if (top && bottom) {
-					System.out.print(' ');
-				} else {
+				Integer top = i + j - 2 * height + 2;
+				Integer bottom = i - j;
+				if (bottom <= 0 ^ top >= 0 || bottom == 0 || top == 0) {
 					System.out.print('*');
+				} else {
+					System.out.print(' ');
 				}
+				
 				
 			}
 			System.out.println();
 		}
-		
+
 		s.close();
 	}
 }
