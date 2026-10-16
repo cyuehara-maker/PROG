@@ -23,10 +23,15 @@ public class RelojArena {
 				 * x-y=0 -> \\\
 				 * (x,y) (0,1) -> 0-(-1)>0 -> x-y>0
 				 * x-y+2h>0
+				 * 
+				 * imagina que una recta diagonal separa todo el plano
+				 * imagina que no hay 1 si no 2 rectas
+				 * imagina que haces xor
+				 * 
 				 */
-				Integer top = i + j - 2 * height;
-				Integer bottom = i - j;
-				if (bottom <= 0 ^ top >= 0 || bottom == 0 || top == 0) {
+				Integer diagonal = i + j - 2 * height;
+				Integer antiDiagonal = i - j;
+				if (antiDiagonal <= 0 ^ diagonal >= 0 || antiDiagonal == 0 || diagonal == 0) {
 					System.out.print('*');
 				} else {
 					System.out.print(' ');
