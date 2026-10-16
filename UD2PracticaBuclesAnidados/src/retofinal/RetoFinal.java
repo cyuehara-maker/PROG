@@ -50,12 +50,12 @@ public class RetoFinal {
 				for (int i = 1; i <= maxHeight; i++) {
 					for (int j = 1; j <= maxHeight; j++) {
 						
-						Boolean top = (i + j > 2 * height || i > j);
-						Boolean bottom = (i + j < 2 * height || i < j);
-						if (top && bottom) {
-							System.out.print(' ');
-						} else {
+						Integer top = i + j - 2 * height;
+						Integer bottom = i - j;
+						if (bottom <= 0 ^ top >= 0 || bottom == 0 || top == 0) {
 							System.out.print('*');
+						} else {
+							System.out.print(' ');
 						}
 						
 					}
