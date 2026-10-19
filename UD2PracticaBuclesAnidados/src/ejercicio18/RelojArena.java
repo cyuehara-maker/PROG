@@ -37,7 +37,6 @@ public class RelojArena {
 					System.out.print(' ');
 				}
 				
-				
 			}
 			System.out.println();
 		}
