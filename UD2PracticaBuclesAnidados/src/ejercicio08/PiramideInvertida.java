@@ -11,9 +11,6 @@ public class PiramideInvertida {
 		
 		for (int i = 0; i < height; i++) {
 			System.out.print(" ".repeat(i));
-
-			// izquierda + derecha - exceso
-			// (height - i) + (height - i) - 1
 			System.out.println("*".repeat(2 * height - 2 * i - 1));
 		}
 		
