@@ -134,5 +134,47 @@ public class Ejercicios {
 		return pasos.stream().takeWhile(e -> e > 0).reduce(0, (a, b) -> a + b);
 	}
 
-	
+	// Ejercicio 4 — Nivel medio de magia en las calabazas
+	public static Double promedioMagia1(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		for (Integer nivel : niveles) {
+			if (nivel >= 5) {
+				sum += 5;
+				numMayores++;
+			}
+		}
+
+		return sum / numMayores;
+	}
+
+	public static Double promedioMagia2(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		for (int i = 0; i < niveles.size(); i++) {
+			if (niveles.get(i) >= 5) {
+				sum += 5;
+				numMayores++;
+			}
+		}
+
+		return sum / numMayores;
+	}
+
+	public static Double promedioMagia3(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		Integer i = 0;
+		while (i < niveles.size()) {
+			if (niveles.get(i) >= 5) {
+				sum += 5;
+				numMayores++;
+			}
+			 i++;
+		}
+		return sum / numMayores;
+	}
 }
