@@ -125,7 +125,15 @@ public class Ejercicios {
 
 	// Ejercicio 2 — Clasificador de caramelos
 	public static Integer cuentaCaramelos(List<String> caramelos, String tipo) {
-		return (int) caramelos.stream().filter(e -> e.equals(tipo)).count();
+		// return (int) caramelos.stream().filter(e -> e.equals(tipo)).count();
+		Integer count = 0;
+		for (String caramelo : caramelos) {
+			if (caramelo != null && caramelo.equals(tipo)) {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 	// Ejercicio 3 — Contador de pasos en el Laberinto

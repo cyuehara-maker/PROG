@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import ejercicios.Ejercicios;
 import utiles.Utiles;
@@ -37,8 +38,8 @@ public class TestEjercicios {
         System.out.println("¿12 es perfecto?   " + Utiles.esPerfecto(12));
         System.out.println("Factorial de 5     " + Utiles.factorial(5));
         System.out.println("Factorial de 0     " + Utiles.factorial(0));
-        //TODO Seguir haciendo las pruebas de los ejercicios
         
+        //TODO Seguir haciendo las pruebas de los ejercicios
         System.out.println("\n--- EJERCICIOS EXAMEN ---");
         System.out.println("1. Control de acceso al Baile de los Monstruos");
         System.out.println(Ejercicios.puedeEntrar(16, true, "zombie")); // true
@@ -46,7 +47,7 @@ public class TestEjercicios {
         System.out.println(Ejercicios.puedeEntrar(15, false, "bruja")); //false
         
         System.out.println("\n2. Clasificador de dulces");
-        List<String> lista = List.of("dulce", "ácido", "dulce", "misterioso");
+        List<String> lista = Arrays.asList("dulce", "ácido", "dulce", "misterioso", null);
         System.out.println(Ejercicios.cuentaCaramelos(lista, "dulce"));
 
         List<Integer> recorrido = List.of(2, 3, 4, -1, 5);
