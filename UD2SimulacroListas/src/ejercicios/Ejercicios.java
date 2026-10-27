@@ -155,7 +155,7 @@ public class Ejercicios {
 		
 		for (int i = 0; i < niveles.size(); i++) {
 			if (niveles.get(i) >= 5) {
-				sum += nivel;
+				sum += nivels.get(i);
 				numMayores++;
 			}
 		}
