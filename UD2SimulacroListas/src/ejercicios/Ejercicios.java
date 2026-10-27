@@ -141,7 +141,7 @@ public class Ejercicios {
 		
 		for (Integer nivel : niveles) {
 			if (nivel >= 5) {
-				sum += 5;
+				sum += nivel;
 				numMayores++;
 			}
 		}
@@ -155,7 +155,7 @@ public class Ejercicios {
 		
 		for (int i = 0; i < niveles.size(); i++) {
 			if (niveles.get(i) >= 5) {
-				sum += 5;
+				sum += nivel;
 				numMayores++;
 			}
 		}
@@ -170,7 +170,7 @@ public class Ejercicios {
 		Integer i = 0;
 		while (i < niveles.size()) {
 			if (niveles.get(i) >= 5) {
-				sum += 5;
+				sum += niveles.get(i);
 				numMayores++;
 			}
 			 i++;
