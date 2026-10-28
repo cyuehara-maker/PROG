@@ -39,7 +39,7 @@ public class TestEjercicios {
         System.out.println("Factorial de 0     " + Utiles.factorial(0));
         System.out.println("Factorial de 5     " + Utiles.factorial(5));
         
-        //TODO Seguir haciendo las pruebas de los ejercicios
+        // Pruebas de los ejercicios
         System.out.println("\n--- PUEDE ENTRAR ---");
         System.out.println(Ejercicios.puedeEntrar(16, true, "zombie")); // true
         System.out.println(Ejercicios.puedeEntrar(15, false, "vampiro")); // true
