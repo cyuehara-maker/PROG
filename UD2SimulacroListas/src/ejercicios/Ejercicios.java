@@ -134,7 +134,7 @@ public class Ejercicios {
 
     // 4. nivel medio de magia en las calabazas
     public static Double promedioMagia(List<Integer> niveles) {
-
+    	
         if (niveles.isEmpty()) {
             return null;
         }
@@ -155,6 +155,7 @@ public class Ejercicios {
 
     // 5. recursividad: cuenta atrás de sustos
     public static void cuentaAtrasSustos(Integer n) {
+    	
         if (n == null) {
             throw new IllegalArgumentException();
         }

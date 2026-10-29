@@ -58,7 +58,7 @@ public class TestEjercicios {
         System.out.println(Ejercicios.promedioMagia(magia)); // (9+7+10)/3 = 8.67
 
         System.out.println("\n--- CUENTA ATRAS SUSTO ---");
-        Ejercicios.cuentaAtrasSustos(null);
+        Ejercicios.cuentaAtrasSustos(4);
 
         System.out.println("\n--- SUMA ENTRE CEROS ---");
         List<Integer> sumaCeros = List.of(3, 9, 0, 4, 10, 0, -3, 5);
