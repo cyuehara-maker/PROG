@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="EjemplosTema2/src"/>
+	<classpathentry kind="src" path="UD1EjerciciosParte1/src"/>
+	<classpathentry kind="src" path="UD1EjerciciosParte2/src"/>
+	<classpathentry kind="src" path="UD2BoletinCondicionales/src"/>
+	<classpathentry kind="src" path="UD2BoletinDoWhile/src"/>
+	<classpathentry kind="src" path="UD2BoletinFor/src"/>
+	<classpathentry kind="src" path="UD2BoletinIfElse/src"/>
+	<classpathentry kind="src" path="UD2BoletinSwitch/src"/>
+	<classpathentry kind="src" path="UD2BoletinWhile/src"/>
+	<classpathentry kind="src" path="UD2PracticaBuclesAnidados/src"/>
+	<classpathentry kind="src" path="UD2SimulacroListas/src"/>
+	<classpathentry kind="src" path="UD999/src"/>
+	<classpathentry kind="src" path="Unit1Project1/src"/>
+	<classpathentry kind="output" path="EjemplosTema2/bin"/>
+</classpath>
