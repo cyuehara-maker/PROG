@@ -15,12 +15,7 @@ public class Oferta {
 			}
 		}
 		
-		for (int i : libros) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-		
-		Integer discount = 0;
+		int discount = 0;
 		for (int i = 2; i < libros.length; i += 3) {
 			discount += libros[i];
 		}
