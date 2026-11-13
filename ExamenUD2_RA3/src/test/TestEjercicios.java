@@ -55,5 +55,6 @@ public class TestEjercicios {
 		System.out.println(Ejercicios.alternatesEvenOdd(Arrays.asList(2, 4, 7, 8)));	// false
 		System.out.println(Ejercicios.alternatesEvenOdd(Arrays.asList(3)));				// true
 		System.out.println(Ejercicios.alternatesEvenOdd(Arrays.asList()));				// true
+		System.out.println(Ejercicios.alternatesEvenOdd(Arrays.asList(1, 1)));			// false
 	}
 }

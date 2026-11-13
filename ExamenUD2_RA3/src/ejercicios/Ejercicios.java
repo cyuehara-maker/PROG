@@ -118,21 +118,18 @@ public class Ejercicios {
 	// lista casi creciente
 	public static Boolean esCasiCreciente(List<Integer> datos) {
 
-		Boolean esCasiCreciente = true;
 		Integer numeroRupturas = 0;
 
 		for (int i = 0; i < datos.size() - 1; i++) {
-
 			if (datos.get(i) >= datos.get(i + 1)) {
 				numeroRupturas++;
 			}
 			if (numeroRupturas > 1) {
-				esCasiCreciente = false;
-				break;
+				return false;
 			}
 		}
 
-		return esCasiCreciente;
+		return true;
 
 	}
 
@@ -153,6 +150,10 @@ public class Ejercicios {
 
 		if (numbers.size() < 2) {
 			return true;
+		}
+		
+		if (numbers.get(0) % 2 == numbers.get(1) % 2) {
+			return false;
 		}
 
 		return Utiles.alternatesAreEvenOrOdd(numbers, 0) && Utiles.alternatesAreEvenOrOdd(numbers, 1);
