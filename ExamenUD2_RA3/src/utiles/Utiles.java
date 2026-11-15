@@ -30,9 +30,9 @@ public class Utiles {
 
 	public static Boolean alternatesAreEvenOrOdd(List<Integer> numbers, Integer index) {
 
-		Integer aux = numbers.get(0) % 2;
+		Integer aux = numbers.get(index) % 2;
 
-		for (int i = 0; i < numbers.size(); i += 2) {
+		for (int i = index; i < numbers.size(); i += 2) {
 			if (numbers.get(i) % 2 != aux) {
 				return false;
 			}
