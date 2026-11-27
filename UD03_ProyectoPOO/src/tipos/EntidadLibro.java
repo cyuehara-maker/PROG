@@ -5,14 +5,14 @@ import java.time.temporal.ChronoUnit;
 
 public class EntidadLibro {
 
-	private final Long ISBN;
+	private final String ISBN;
 	private final String titulo;
 	private final Integer numPaginas;
 	private final LocalDate fechaPublicacion;
 	private Boolean prestado;
 	private Double precio;
 	
-	public EntidadLibro(Long isbn, String titulo, Integer numPaginas, LocalDate fechaPublicacion, Double precio) {
+	public EntidadLibro(String isbn, String titulo, Integer numPaginas, LocalDate fechaPublicacion, Double precio) {
 
 		if (isbn == null) {
 			throw new IllegalArgumentException("id no puede ser null");
@@ -38,7 +38,7 @@ public class EntidadLibro {
 		this.prestado = false;
 	}
 	
-	public Long getISBN() {
+	public String getISBN() {
 		return ISBN;
 	}
 
@@ -69,7 +69,7 @@ public class EntidadLibro {
 	public void setPrecio(Double precio) {
 
 		if (precio < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("el precio no puede ser negativo");
 		}
 		
 		this.precio = precio;

@@ -8,7 +8,7 @@ import tipos.EntidadLibro;
 public class TestLibro {
 	public static void main(String[] args) {
 		
-		EntidadLibro libro = new EntidadLibro(123456789123l, "libroso", 1, LocalDate.of(2008, 1, 1), 10.5);
+		EntidadLibro libro = new EntidadLibro("123-45-67891-23-5", "libroso", 1, LocalDate.of(2008, 1, 1), 10.5);
 		
 		System.out.println(libro);
 		System.out.println(libro.getISBN());
