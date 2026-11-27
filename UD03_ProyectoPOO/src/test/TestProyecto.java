@@ -43,14 +43,15 @@ public class TestProyecto {
 		}
 
 		System.out.println("\nBUSCAR");
-		System.out.println(biblioteca.buscar("676-67-67676-67-6"));
-		System.out.println(biblioteca.buscar("000-00-00000-00-0"));
+		System.out.println("676-67-67676-67-6: " + biblioteca.buscar("676-67-67676-67-6"));
+		System.out.println("000-00-00000-00-0: " + biblioteca.buscar("000-00-00000-00-0"));
 
 		System.out.println("\nELIMINAR");
-		System.out.println(biblioteca.eliminar("676-67-67676-67-6"));
-		System.out.println(biblioteca.eliminar("676-67-67676-67-6"));
-		System.out.println("total libros: " + biblioteca.contarLibros());
-		System.out.println(biblioteca);
+		System.out.println("eliminado: " + biblioteca.eliminar("676-67-67676-67-6"));
+		System.out.println("eliminado: " + biblioteca.eliminar("676-67-67676-67-6"));
+		
+		System.out.println("\nCONTAR ELEMENTOS");
+		biblioteca.printarLibros();
 
 		EntidadLibro eliminado = biblioteca.eliminar("456");
 		System.out.println(eliminado);

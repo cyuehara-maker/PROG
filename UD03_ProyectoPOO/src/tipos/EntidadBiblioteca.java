@@ -6,7 +6,7 @@ import java.util.List;
 public class EntidadBiblioteca {
 
     private final String nombre;
-    private List<EntidadLibro> libros;
+    private final List<EntidadLibro> libros;
 
     public EntidadBiblioteca(String nombre) {
         this.nombre = nombre;
@@ -18,7 +18,7 @@ public class EntidadBiblioteca {
     }
 
     public List<EntidadLibro> getLibros() {
-        return libros;
+        return new ArrayList<>(libros);
     }
 
     public Boolean agregar(EntidadLibro libro) {
@@ -49,8 +49,10 @@ public class EntidadBiblioteca {
         return libro;
     }
 
-    public Integer contarLibros() {
-        return libros.size();
+    public void printarLibros() {
+        for (int i = 0; i < libros.size(); i++) {
+            System.out.println(i + 1 + ". " + libros.get(i));
+        }
     }
 
     @Override
