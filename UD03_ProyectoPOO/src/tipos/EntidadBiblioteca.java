@@ -19,11 +19,7 @@ public class EntidadBiblioteca {
 
     public Boolean agregar(EntidadLibro libro) {
 
-        if (libro.equals(null)) {
-            throw new IllegalArgumentException("el libro debe existir");
-        }
-
-        if (libros.contains(libro)) {
+        if (libro == null || libros.contains(libro)) {
             return false;
         }
 

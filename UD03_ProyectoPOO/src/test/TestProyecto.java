@@ -3,6 +3,7 @@ package test;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+import tipos.EntidadBiblioteca;
 import tipos.EntidadLibro;
 
 public class TestProyecto {
@@ -26,5 +27,7 @@ public class TestProyecto {
 		System.out.println(libro);
 
         // ENTIDAD BIBLIOTECA
+		EntidadBiblioteca biblioteca = new EntidadBiblioteca("biblioteca publica");
+		System.out.println(biblioteca.agregar(null));
     }
 }
