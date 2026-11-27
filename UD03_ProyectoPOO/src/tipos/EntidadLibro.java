@@ -5,18 +5,16 @@ import java.time.temporal.ChronoUnit;
 
 public class EntidadLibro {
 
-	// atributos
-	private final Integer ID;
+	private final String ISBN;
 	private final String titulo;
 	private final Integer numPaginas;
 	private final LocalDate fechaPublicacion;
 	private Boolean prestado;
 	private Double precio;
 	
-	// constructor
-	public EntidadLibro(Integer id, String titulo, Integer numPaginas, LocalDate fechaPublicacion, Double precio) {
+	public EntidadLibro(String isbn, String titulo, Integer numPaginas, LocalDate fechaPublicacion, Double precio) {
 
-		if (id == null) {
+		if (isbn == null) {
 			throw new IllegalArgumentException("id no puede ser null");
 		}
 
@@ -32,7 +30,7 @@ public class EntidadLibro {
 			throw new IllegalArgumentException("fechaPublicacion debe ser una fecha anterior");
 		}
 
-		this.ID = id;
+		this.ISBN = isbn;
 		this.titulo = titulo;
 		this.numPaginas = numPaginas;
 		this.fechaPublicacion = fechaPublicacion;
@@ -40,9 +38,8 @@ public class EntidadLibro {
 		this.prestado = false;
 	}
 	
-	// getters y setters
-	public Integer getID() {
-		return ID;
+	public String getISBN() {
+		return ISBN;
 	}
 
 	public String getTitulo() {
@@ -72,7 +69,7 @@ public class EntidadLibro {
 	public void setPrecio(Double precio) {
 
 		if (precio < 0) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("el precio no puede ser negativo");
 		}
 		
 		this.precio = precio;
@@ -82,15 +79,45 @@ public class EntidadLibro {
 		return (int) fechaPublicacion.until(LocalDate.now(), unidad);
 	}
 
-	// metodos
 	public void aplicarDescuento(Double descuento) {
-		setPrecio(precio * (1 - descuento));
+
+		if (descuento == null || descuento > 1 || descuento < 0) {
+			throw new IllegalArgumentException("descuento debe ser entre 0.0 y 1.0");
+		}
+		
+		double precioNuevo = precio * (1 - descuento);
+		precioNuevo = Math.round(precioNuevo * 100) / 100.;
+		setPrecio(precioNuevo);
 	}
 
-	// to string
 	@Override
 	public String toString() {
-		return "[ ID=" + ID + ", titulo=" + titulo + ", precio=" + precio + " ]";
+		return "Libro(ISBN=" + ISBN + ", titulo=" + titulo + ", precio=" + precio + ")";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ISBN == null) ? 0 : ISBN.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EntidadLibro other = (EntidadLibro) obj;
+		if (ISBN == null) {
+			if (other.ISBN != null)
+				return false;
+		} else if (!ISBN.equals(other.ISBN))
+			return false;
+		return true;
 	}
 
 }
